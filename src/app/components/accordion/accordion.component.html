@@ -1,0 +1,37 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Year</th>
+        <th scope="col">Title</th>
+        <th scope="col">Release Label</th>
+        <th scope="col">No of Tracks</th>
+       
+      </tr>
+    </thead>
+    <tbody>
+        <!-- @for(var i=0; i<release_year.length; i++){ -->
+          <!-- class="w-6 h-6 text-yellow-600 hover:cursor-pointer" -->
+          <!-- (click)="markUnImportant(task)" -->
+            <tr *ngFor="let n of numSequence(10); 
+            let i = index;">
+                <td>
+                  <a >
+                    <svg class="bi " xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="26" height="26"
+                        viewBox="0 0 48 48">
+                        <path fill="#4caf50"
+                            d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"></path>
+                        <path fill="#fff" d="M21,14h6v20h-6V14z"></path>
+                        <path fill="#fff" d="M14,21h20v6H14V21z"></path>
+                    </svg>
+                </a>
+                </td>
+                <td>{{release_year[i]}}</td>
+                <td>{{release_title[i]}}</td>
+                <td>{{release_label[i]}}</td>
+                <td>{{track_count[i]}}</td>
+              </tr>
+        <!-- } -->
+
+    </tbody>
+  </table>
